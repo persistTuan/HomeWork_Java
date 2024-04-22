@@ -1,0 +1,40 @@
+package managermentEmployee;
+
+import java.awt.ContainerOrderFocusTraversalPolicy;
+import java.util.Scanner;
+
+public class Employee {
+	private int id;
+	private String name;
+	private int age;
+	private String department;
+	private String code;
+	private float salaryRate;
+	
+	public Employee(int id, String name, int age, String department, String code , float salaryRate)
+	{
+		id = this.id;
+		name = this.name;
+		age = this.age;
+		department = this.department;
+		code = this.code;
+		salaryRate = this.salaryRate;
+	}
+	
+	void input() {
+		System.out.println("Nhập Các thông tin của Employee");
+		System.out.print("Nhập Name:");
+		this.name = Scanner.nextLine();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	public void getName() {
+		return this.name;
+	}
+	public static void main(String[] args) {
+		
+	}
+	
+}

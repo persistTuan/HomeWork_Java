@@ -1,0 +1,46 @@
+package managermentEmployee;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+	
+	public static int ID = 0;
+	
+	public static boolean removeEmployee(List<Employee> listEmployee, String code) {
+		listEmployee.forEach((employee) -> {
+			if(ls.getCode() == code)
+				{
+					return listEmployee.remove(ls);
+				}
+		});
+//		for (Employee ls : listEmployee) {
+//			if(ls.getCode() == code)
+//			{
+//				return listEmployee.remove(ls);
+//			}
+//		}
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		List<Employee> ls = new ArrayList<Employee>();
+		for(int i=0; i<10; i++)
+		{
+			Employee emp = new Employee();
+			emp.inputEmployee();
+			ls.add(emp);
+		}
+		String code = input.nextLine();
+		boolean check = removeEmployee(ls, code);
+		if(check) {
+			System.out.println("Xóa Thành Công");
+		}
+		else {
+			System.out.println("Thất bại vì không có mã code trùng");
+		}
+	}
+}

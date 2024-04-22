@@ -1,0 +1,68 @@
+package managermentEmployee;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+	
+	public static int ID = 0;
+	
+	public class CRUDEmployee {
+		
+		private List<Employee> listEmployee = new ArrayList<Employee>();
+		
+		public List<Employee> getListEmployee()
+		{
+			return this.listEmployee;
+		}
+		public boolean removeEmployee(List<Employee> listEmployee, String code) 
+		{
+			for (Employee ls : listEmployee) {
+//				System.out.println(ls.getCode());
+				if(ls.getCode().equals(code))
+				{
+					return listEmployee.remove(ls);
+				}
+			}
+			return false;
+		}
+		
+		public void ShowListEmployee(List<Employee> listEmployee) 
+		{
+			for (Employee ls : listEmployee) {
+				ls.outputEmpoyee();
+			}
+		}
+		
+		public void AddEmployee(Employee ep)
+		{
+			
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		List<Employee> listEmployee = new ArrayList<Employee>();
+		for(int i=0; i<2; i++)
+		{
+			Employee emp = new Employee();
+			emp.inputEmployee();
+			listEmployee.add(emp);
+		}
+		String code = input.nextLine();
+		boolean check = removeEmployee(listEmployee, code);
+		if(check) {
+			System.out.println("Xóa Thành Công");
+		}
+		else {
+			System.out.println("Thất bại vì không có mã code trùng");
+		}
+		
+		ShowListEmployee(listEmployee);
+		
+	}
+}

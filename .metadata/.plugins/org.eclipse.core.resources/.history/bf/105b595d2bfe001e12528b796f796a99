@@ -1,0 +1,15 @@
+package managermentEmployee;
+
+public class Employee {
+	private id;
+	private name;
+	private age;
+	private department;
+	private code;
+	private slaryRate;
+	
+	public static void main(String[] args) {
+		
+	}
+	
+}
