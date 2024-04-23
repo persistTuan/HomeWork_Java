@@ -30,8 +30,7 @@ public class Employee {
 	
 	void inputEmployee() {
 		Scanner input = new Scanner(System.in);
-		ID++;
-		this.id = ID;
+		this.id = ID++;
 		System.out.println("Nhập Các thông tin của Employee");
 		System.out.print("Nhập Name: ");
 		this.name = input.nextLine();

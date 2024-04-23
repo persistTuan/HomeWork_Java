@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 	
+	public static int ID = 0;
 	
 	public static class CRUDEmployee {
 		
@@ -66,6 +67,8 @@ public class Main {
 		}
 		
 		handleEmployee.ShowListEmployee();
+		
+		
 		
 	}
 }
